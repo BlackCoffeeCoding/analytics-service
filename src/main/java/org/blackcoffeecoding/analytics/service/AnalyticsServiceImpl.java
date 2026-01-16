@@ -8,12 +8,12 @@ import org.blackcoffeecoding.grpc.DeviceRatingResponse;
 
 import java.util.Random;
 
-@GrpcService // <-- Эта аннотация делает класс gRPC сервером
+@GrpcService
 public class AnalyticsServiceImpl extends AnalyticsServiceGrpc.AnalyticsServiceImplBase {
 
     @Override
     public void calculateDeviceRating(DeviceRatingRequest request, StreamObserver<DeviceRatingResponse> responseObserver) {
-        // Имитация бурной деятельности
+
         int score = new Random().nextInt(100);
         String verdict = score > 50 ? "TOP DEVICE" : "AVERAGE";
 

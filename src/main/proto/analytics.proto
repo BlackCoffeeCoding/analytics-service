@@ -1,12 +1,10 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-// Пакет для сгенерированных классов
 option java_package = "org.blackcoffeecoding.grpc";
 option java_outer_classname = "AnalyticsServiceProto";
 
 service AnalyticsService {
-  // Метод расчета рейтинга устройства
   rpc CalculateDeviceRating (DeviceRatingRequest) returns (DeviceRatingResponse) {}
 }
 
